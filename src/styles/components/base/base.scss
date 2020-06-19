@@ -63,18 +63,6 @@ a {
 		opacity: 0;
 		visibility: hidden;
 	}
-	.offcanvas-menu & {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		
-		&:before {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
 }
 
 .btn {
@@ -95,15 +83,6 @@ a {
 	}
 	&.btn-sm {
 		font-size: $font-size-base - .1rem;
-	}
-	&.btn-primary {
-		// font-weight: 300;
-		// letter-spacing: .2em;
-	}
-	
-
-	&.pill {
-		border-radius: 30px!important;
 	}
 
 	&.btn-white {
@@ -191,58 +170,8 @@ a {
 	}
 }
 
-.bg-text-line {
-  display: inline;
-  background: $black;
-  box-shadow: 20px 0 0 $black, -20px 0 0 $black;
-}
 
-.bg-image {
-	background-size: cover;
-	background-repeat: no-rpeeat;
-	overflow: hidden;
-	background-position: center center;
-	&.center {
-		background-position: top center;
-	}
-	&.fixed {
-		background-position: fixed!important;
-	}
-	&.overlay, &.overlay-primary, &.overlay-info, &.overlay-success, &.overlay-warning {
-		position: relative;
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0; bottom: 0; right: 0; left: 0;
-		}
-	}
-	&.overlay {
-		&:before {
-			background: rgba($black, .4);
-		}
-	}
-	&.overlay-primary {
-		&:before {
-			background: rgba($primary, .9);
-		}
-	}
-	&.overlay-info {
-		&:before {
-			background: rgba($info, .9);
-		}
-	}
-	&.overlay-success {
-		&:before {
-			background: rgba($success, .9);
-		}
-	}
-	&.overlay-success {
-		&:before {
-			background: rgba($warning, .9);
-		}
-	}
-}
-.display-3, .display-2, .display-4 {
+.display-4 {
 	@include media-breakpoint-down(sm) {
 		font-size: 3rem!important;
 	}
